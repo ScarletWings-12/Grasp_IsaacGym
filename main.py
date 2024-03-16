@@ -59,8 +59,6 @@ from omni.isaac.cloner import GridCloner    # import Cloner interface
 from omni.isaac.core.utils.stage import add_reference_to_stage
 
 # Custom Classes
-from manager import Manager
-from views import View
 
 #Omni Libraries
 from omni.isaac.core.utils.stage import add_reference_to_stage,open_stage, save_stage
@@ -160,9 +158,9 @@ if __name__ == "__main__":
     
     
     # Directories
-    grippers_directory = "/home/szh/Documents/Grasp_Isaacgym/grippers"
-    objects_directory = "/home/szh/Documents/Grasp_Isaacgym/grippers"
-    output_directory = "/home/szh/Documents/Grasp_Isaacgym/output"
+    grippers_directory = "/home/szh/Documents/Grasp_IsaacGym/grippers"
+    objects_directory = "/home/szh/Documents/GoogleScannedObjects_USD"
+    output_directory = "/home/szh/Documents/Grasp_IsaacGym/output"
     # grippers_directory = args.gripper_dir
     # objects_directory = args.objects_dir
     # output_directory = args.output_dir
@@ -173,7 +171,8 @@ if __name__ == "__main__":
         raise ValueError("Objects directory not given correctly")
     elif not os.path.exists(output_directory): 
         raise ValueError("Output directory not given correctly")
-
+    
+    
     # Testing Hyperparameters
     num_w = args.num_w
     test_time = args.test_time
